@@ -1,14 +1,9 @@
 ﻿using CustomGenerator.Utility;
-using CustomGenerator.Utility;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text.RegularExpressions;
-using UnityEngine;
 
 using static CustomGenerator.ExtConfig;
 namespace CustomGenerator.Generators

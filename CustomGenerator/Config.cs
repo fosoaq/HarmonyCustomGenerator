@@ -12,7 +12,7 @@ namespace CustomGenerator
         public const bool EN = true;
         public static ConfigData Config;
         public static TempData tempData;
-        private static readonly string CurrentVersion = "0.2.0";
+        private static readonly string CurrentVersion = "0.2.1";
 
         private static readonly string Location = Path.Combine("HarmonyConfig", "CustomGenerator.json");
 
@@ -21,9 +21,6 @@ namespace CustomGenerator
         }
 
         public class ConfigData {
-            [JsonProperty(EN ? "Skip Asset Warmup" : "Пропустить Asset Warmup")]
-            public bool SkipAssetWarmup = true;
-
             [JsonProperty(EN ? "Map Settings" : "Настройки Карты")]
             public MapSettings mapSettings = new();
 
@@ -206,7 +203,6 @@ namespace CustomGenerator
                     Logging.Config($"Backup created at: {backupPath}");
                     
                     Config = new ConfigData();
-                    Config.SkipAssetWarmup = oldConfig.SkipAssetWarmup;
                     
                     if (oldConfig.mapSettings != null) {
                         Config.mapSettings.GenerateNewMapEverytime = oldConfig.mapSettings.GenerateNewMapEverytime;

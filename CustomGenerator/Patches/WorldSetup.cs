@@ -6,7 +6,6 @@ using System;
 using System.IO;
 
 using static CustomGenerator.ExtConfig;
-using CustomGenerator.Utility;
 namespace CustomGenerator.Patches {
 
     [HarmonyPatch]

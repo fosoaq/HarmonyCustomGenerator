@@ -17,6 +17,7 @@ using SDFontStyle = System.Drawing.FontStyle;
 using static CustomGenerator.ExtConfig;
 using CustomGenerator.Utility;
 using System.Diagnostics;
+using System.Threading.Tasks;
 namespace CustomGenerator.Utility {
     // я честно не ебу что тут понаписал, но работает
     // upd. я ебу
@@ -79,15 +80,8 @@ namespace CustomGenerator.Utility {
         private static readonly Vector4 PebbleColor = new Vector4(7f / 51f, 0.2784314f, 0.2761563f, 1f);
         private static readonly Vector4 OffShoreColor = new Vector4(0.04090196f, 0.220600322f, 14f / 51f, 1f);
         private static readonly Vector3 SunDirection = Vector3.Normalize(new Vector3(0.95f, 2.87f, 2.37f));
-        private const float SunPower = 0.65f;
-        private const float Brightness = 1.05f;
-        private const float Contrast = 0.94f;
-        private const float OceanWaterLevel = 0f;
         private static readonly Vector4 Half = new Vector4(0.5f, 0.5f, 0.5f, 0.5f);
-        private static Array2D<Color> generatedMap;
-        private static Array2D<Color> generatedMapIcons;
-        private static int width;
-        private static int height;
+
         public readonly struct Array2D<T> {
             private readonly T[] _items;
             private readonly int _width;
