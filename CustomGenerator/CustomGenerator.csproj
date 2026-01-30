@@ -197,7 +197,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrap.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Custom\SwapMonument.cs" />
     <Compile Include="HarmonyHooks.cs" />
